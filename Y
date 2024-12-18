@@ -1,0 +1,21 @@
+class Animal:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    def make_sound(self):
+        return "Generic sound"
+    def __str__(self):
+        return f"{self.name}, {self.age} years old"
+class Dog(Animal):
+    def make_sound(self):
+        return "Woof!"
+class Cat(Animal):
+    def make_sound(self):
+        return "Meow!"
+if __name__ == "__main__":
+    animals = [
+        Dog("Buddy", 3),
+        Cat("Whiskers", 2)
+    ]
+    for animal in animals:
+        print(f"{animal} says {animal.make_sound()}")
